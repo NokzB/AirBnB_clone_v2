@@ -3,6 +3,7 @@
 
 sudo apt-get update
 sudo apt-get install -y nginx
+sudo ufw allow 'Nginx HTTP'
 # Creating folders
 sudo mkdir -p /data/
 sudo mkdir -p /data/web_static/
@@ -10,8 +11,8 @@ sudo mkdir -p /data/web_static/releases/
 sudo mkdir -p /data/web_static/releases/test/
 sudo mkdir -p /data/web_static/shared/
 # Changing ownership to ubuntu
-sudo chown -R ubuntu /data/
-sudo chgrp -R ubuntu /data/
+sudo chown -R ubuntu /data
+sudo chgrp -R ubuntu /data
 # Creating html file with content to test configuration
 sudo echo "<html>
   <head>
